@@ -1,0 +1,17 @@
+{
+  "name": "yet-unnamed-text-learning-app-core",
+  "version": "0.0.0",
+  "description": "Core for my text learning app",
+  "main": "dist/index.js",
+  "typings": "dist/index",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "author": "Marcin Mikołajczak",
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}

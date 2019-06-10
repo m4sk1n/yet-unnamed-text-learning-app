@@ -1,0 +1,91 @@
+{
+  "about": {
+    "about": "About",
+    "about_desc": "yet-unnamed-text-learning-app is an app designed to help you to memorize long text.",
+    "author_info": "Created by {0}.",
+    "license_info": "This app is licensed under the MIT license."
+  },
+  "alerts": {
+    "created_course": "Successfully created a new course.",
+    "edited_course_details": "Successfully edited course details.",
+    "deleted_course": "Successfully deleted a course.",
+    "finished_course": "You have already finished this course",
+    "finished_session": "You have finished the session!",
+    "reset_course": "Successfully reset course progress."
+  },
+  "courses_list": {
+    "no_courses": "You have not created any course yet. Click on the {0} button to add one."
+  },
+  "dialogs": {
+    "create_course": {
+      "help_desc": "The course content should consist of kind of ‘verses’ separated by two line breaks. Example:",
+      "help_headline": "How to prepare course content",
+      "label_color": "Course color",
+      "label_content": "Course content",
+      "label_title": "Course title",
+      "step_content": "Course content",
+      "step_details": "Course details"
+    },
+    "edit_course": {
+      "button_export": "Export course",
+      "delete_warning_desc": "It cannot be undone.",
+      "delete_warning_heading": "Do you want to delete the {title} course?",
+      "header_edit": "Edit course",
+      "label_color": "Course color",
+      "label_title": "Course title",
+      "reset_warning_desc": "It cannot be undone.",
+      "reset_warning_heading": "Do you want to reset progress in the {title} course?"
+    }
+  },
+  "errors": {
+    "indentation": "This level of indentation is not supported yet :/",
+    "no_content": "Course content is required",
+    "no_title": "Course title is required"
+  },
+  "general": {
+    "abort": "Abort",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "create": "Create",
+    "delete": "Delete",
+    "exit": "Exit",
+    "help": "Help",
+    "learn": "Learn",
+    "reset": "Reset",
+    "skip": "Skip",
+    "update": "Update"
+  },
+  "session": {
+    "correct_answer": "Correct answer:",
+    "exit_prompt_desc": "Do you want to exit the session? Your progress won’t be lost.",
+    "exit_prompt_heading": "Exit the session?"
+  },
+  "settings": {
+    "dark_mode": "Enable dark mode",
+    "duplicates_desc": "Do you want to import their duplicate anyway? You can also abort importing or skip just these course.",
+    "duplicates_heading": "At lest one course you are trying to import is a duplicate of already existing one.",
+    "duplicates_import": "Import anyway",
+    "exercises_amount": "Exercises per session",
+    "export_all": "Export all courses",
+    "header_backup": "Backup",
+    "header_general": "General",
+    "import_multiple": "Import multiple courses",
+    "import_single": "Import single courses",
+    "language": "Interface language"
+  },
+  "toolbar": {
+    "courses":"Courses",
+    "settings": "Setings"
+  },
+  "tour": {
+    "hello_desc": "yet-unnamed-text-learning-app is an app designed to help you with learning long sentences of text. You can create a course with the text you want to learn and memorize it with help of our simple exercises. If you haven't created a course yet, use the {0} icon on the top to do so.",
+    "hello_heading": "Hello!",
+    "sessions_desc": "Clicking on the ‘Learn’ button stars a new learning session. Each session consists of a couple of exercises (by default it's 15, but you can change the amount in Settings) designed to help you remember the text. There are three kinds of exercises:",
+    "sessions_exercise1": "in ordering exercises you are provided with a list of words or longer parts of the text. Your task is to put them in the order they appear in the text,",
+    "sessions_exercise2": "in selecting exercises you are provided with incomplete excerpt of the text. Your task is to select the missing parts from the bottom. To make the exercise harder, there are extra words not appearing in the excerpt,",
+    "sessions_exercise3": "in writing exercises you are provided with incomplete excerpt of the text. Your task is to write the missing words in the correct place.",
+    "sessions_heading": "Learning sessions",
+    "settings_desc": "This app contains a dark mode you can switch in the settings tab. You can also import a copy of courses from another device or export one. Have I mentioned you can export a single course when you click on a {0} icon?",
+    "settings_heading": "Settings"
+  }
+}

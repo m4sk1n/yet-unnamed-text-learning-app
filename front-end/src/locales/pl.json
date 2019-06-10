@@ -1,0 +1,73 @@
+{
+  "alerts": {
+    "created_course": "Pomyślnie utworzono nowy kurs.",
+    "edited_course_details": "Pomyślnie zedytowano informacje o kursie.",
+    "deleted_course": "Pomyślnie usunięto kurs.",
+    "finished_course": "Już ukończyłeś(-aś) ten kurs.",
+    "finished_session": "Ukończyłeś(-aś) sesję!",
+    "reset_course": "Pomyślnie wyzerowano postęp w kursie."
+  },
+  "courses_list": {
+    "no_courses": "Nie utworzyłeś(-aś) jeszcze żadnego kursu. Naciśnij przycisk {0} aby dodać nowy."
+  },
+  "dialogs": {
+    "create_course": {
+      "help_desc": "Zawartość kursu powinna składać się z czegoś w rodzaju „zwrotek” oddzielonych dwoma znakami nowej linii. Na przykład:",
+      "help_headline": "Jak przygotować zawartość kursu",
+      "label_color": "Kolor kursu",
+      "label_content": "Zawartość kursu",
+      "label_title": "Tytuł kursu",
+      "step_content": "Zawartość kursu",
+      "step_details": "Informacje o kursie"
+    },
+    "edit_course": {
+      "button_export": "Eksportuj kurs",
+      "delete_warning_desc": "Nie możesz tego cofnąć.",
+      "delete_warning_heading": "Czy chcesz usunąć kurs „{title}”?",
+      "header_edit": "Edycja kursu",
+      "label_color": "Kolor kursu",
+      "label_title": "Tytuł kursu",
+      "reset_warning_desc": "Nie możesz tego cofnąć.",
+      "reset_warning_heading": "Czy chcesz wyzerować postęp w kursie „{title}”?"
+    }
+  },
+  "errors": {
+    "indentation": "This level of indentation is not supported yet :/",
+    "no_content": "Zawartość kursu jest wymagana",
+    "no_title": "Tytuł kursu jest wymagany"
+  },
+  "general": {
+    "abort": "Przerwij",
+    "cancel": "Anuluj",
+    "continue": "Kontynuuj",
+    "create": "Utwórz",
+    "delete": "Usuń",
+    "exit": "Wyjdź",
+    "help": "Pomoc",
+    "learn": "Ucz się",
+    "reset": "Wyzeruj",
+    "skip": "Pomiń",
+    "update": "Aktualizuj"
+  },
+  "session": {
+    "correct_answer": "Prawidłowa odpowiedź:",
+    "exit_prompt_desc": "Czy chcesz wyjść z sesji? Nie utracisz postępu z tej sesji.",
+    "exit_prompt_heading": "Chcesz wyjść z sesji?"
+  },
+  "settings": {
+    "dark_mode": "Włącz ciemny tryb",
+    "duplicates_desc": "Czy chcesz zaimportować ich duplikaty mimo wszystko. Możesz też przerwać importowanie lub pominąć tylko te kursy.",
+    "duplicates_heading": "Przynajmniej jeden z kursów, które próbujesz zaimportować jest duplikatem istniejącego kursu.",
+    "duplicates_import": "Importuj mimo tego",
+    "exercises_amount": "Ćwiczenia w sesji",
+    "export_all": "Eksportuj wszystkie kursy",
+    "header_backup": "Kopie zapasowe",
+    "header_general": "Ogólne",
+    "import_multiple": "Importuj wiele kursów",
+    "import_single": "Importuj jeden kurs"
+  },
+  "toolbar": {
+    "courses": "Kursy",
+    "settings": "Ustawienia"
+  }
+}

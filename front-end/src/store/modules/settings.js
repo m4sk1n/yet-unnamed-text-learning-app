@@ -23,7 +23,9 @@ const mutations = {
 const actions = {
   loadSettings({ commit }) {
     return localForage.getItem('settings').then(settings => {
-      commit('setSettings', settings);
+      if (settings) {
+        commit('setSettings', settings);
+      }
     });
   },
 

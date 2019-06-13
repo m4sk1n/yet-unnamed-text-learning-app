@@ -1,6 +1,7 @@
 import { IContent, IExercise, ISession } from '../Interfaces/index';
 import { getPrecedingSibling, getSubsequentSibling } from '../Utils/Content';
 import generateUUID from '../Utils/generateUUID';
+import { simplify } from '../Utils/String';
 
 export default abstract class Exercise implements IExercise {
   public type: string;
@@ -18,7 +19,11 @@ export default abstract class Exercise implements IExercise {
     this.uuid = generateUUID();
     session.setCheckFn((ans: string): string => {
       if (this.answered === undefined) {
-        this.answered = this.answer === ans;
+        if (this.type === 'word-writing' || this.type === 'writing') {
+          this.answered = this.answer.split(' ').map(simplify).join(' ') === ans.split(' ').map(simplify).join(' ');
+        } else {
+          this.answered = this.answer === ans;
+        }
         if (this.answered) {
           switch (this.type) {
             case 'word-ordering':

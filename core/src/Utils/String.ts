@@ -1,5 +1,6 @@
 export function simplify(str: string) {
-  return str.toLowerCase()
+  return str
+    .toLowerCase()
     .replace(/ /g, ' ')
     .replace(/(„|”|“)/g, '"')
     .replace(/‒|–|—|―|⸺|⸻/g, '-')

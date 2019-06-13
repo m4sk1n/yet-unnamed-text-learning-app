@@ -1,5 +1,4 @@
 import { IContent, IProgress } from '../Interfaces/index';
-import { simplify } from '../Utils/String';
 
 export default class Content implements IContent {
   public static stringify(content: IContent) {
@@ -86,7 +85,6 @@ export default class Content implements IContent {
   }
 
   public children: string | IContent[];
-  public simplifiedContent?: string;
   public level: number;
   public words: number;
   public lines: number;
@@ -124,7 +122,6 @@ export default class Content implements IContent {
     } else {
       this.lines = 1;
       this.words = this.children.split(' ').length;
-      this.simplifiedContent = simplify(this.children);
     }
   }
 }

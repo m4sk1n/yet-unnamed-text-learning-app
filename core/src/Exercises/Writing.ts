@@ -2,7 +2,6 @@ import { IContent, ISession } from '../Interfaces/index';
 import { get2DArrayElement, get2DArrayLength, set2DArrayElement } from '../Utils/Array';
 import { arrayify } from '../Utils/Content';
 import { generateUniqueRandomNumbers } from '../Utils/Random';
-import { simplify } from '../Utils/String';
 import Exercise from './index';
 
 export default class WritingExercise extends Exercise {
@@ -42,6 +41,6 @@ export default class WritingExercise extends Exercise {
         set2DArrayElement(this.text, num, undefined);
       }
     }
-    this.answer = answers.map(simplify).join(' ');
+    this.answer = answers.join(' ');
   }
 }

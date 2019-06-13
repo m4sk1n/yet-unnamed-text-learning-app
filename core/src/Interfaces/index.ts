@@ -4,7 +4,6 @@ interface ICourse {
 
 interface IContent {
   children: IContent[] | string;
-  simplifiedContent?: string;
   lines: number;
   words: number;
   level: number;

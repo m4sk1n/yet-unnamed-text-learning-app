@@ -31,7 +31,6 @@
 <script>
 import Vue from 'vue';
 import draggable from 'vuedraggable';
-import simplify from '@/utils/simplify';
 import ButtonCheck from '@/components/ButtonCheck';
 import Error from '@/components/Error';
 
@@ -125,7 +124,7 @@ export default {
         this.error.next();
         this.error = undefined;
       } else {
-        this.error = this.session.check(this.answers.map(simplify).join(' '));
+        this.error = this.session.check(this.answers.join(' '));
       }
     },
   },

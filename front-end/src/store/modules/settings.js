@@ -23,7 +23,7 @@ const mutations = {
 const actions = {
   loadSettings({ commit }) {
     return localForage.getItem('settings').then(settings => {
-      commit('setSettings', settings || { darkMode: true });
+      commit('setSettings', settings);
     });
   },
 

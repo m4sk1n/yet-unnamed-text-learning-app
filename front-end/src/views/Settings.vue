@@ -27,7 +27,7 @@
         <v-list-tile-action>
           <v-select
             style="width: min-content"
-            :value="exercisesAmount || 15"
+            :value="exercisesAmount"
             :items="[5,10,15,25,40]"
             @change="$store.dispatch('settings/changeSetting', {
               key: 'exercisesAmount',
@@ -45,7 +45,7 @@
         <v-list-tile-action>
           <v-select
             style="width: min-content"
-            :value="language || 'en'"
+            :value="language"
             :items="langs"
             item-text="lang"
             item-value="code"

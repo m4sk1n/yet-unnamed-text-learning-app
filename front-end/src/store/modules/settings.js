@@ -1,7 +1,11 @@
 import localForage from 'localforage';
 
 const state = {
-  settings: {},
+  settings: {
+    darkMode: false,
+    exercisesAmount: 15,
+    language: 'en',
+  },
 };
 
 const getters = {
@@ -12,7 +16,7 @@ const getters = {
 
 const mutations = {
   setSettings(state, settings) {
-    state.settings = settings;
+    state.settings = {...state.settings, ...settings};
   },
 
   setSetting(state, { key, value }) {
@@ -31,7 +35,7 @@ const actions = {
 
   changeSetting({ commit }, { key, value }) {
     commit('setSetting', { key, value });
-    localForage.setItem(`settings`, state.settings);
+    return localForage.setItem(`settings`, state.settings);
   },
 };
 

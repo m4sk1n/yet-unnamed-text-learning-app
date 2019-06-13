@@ -63,7 +63,7 @@ export default {
     this.content = Content.parse(
       this.$store.getters['courses/courses'][this.$route.params.uuid]
     );
-    this.session = new Session({ content: this.content, exercises: this.$store.getters['settings/all'].exercisesAmount || 15 });
+    this.session = new Session({ content: this.content, exercises: this.$store.getters['settings/all'].exercisesAmount });
     if (this.session.finished) {
       this.$store.dispatch('alerts/add', {
         text: this.$t('alerts.finished_course'),

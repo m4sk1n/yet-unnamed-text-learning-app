@@ -245,7 +245,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .longer-setting > .v-list__tile {
     height: auto;
   }

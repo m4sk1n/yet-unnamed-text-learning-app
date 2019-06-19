@@ -26,7 +26,7 @@
           <v-btn
             flat
             color="red darken-1"
-            @click="exit()"
+            @click="exit"
           >
             {{ $t('general.exit') }}
           </v-btn>

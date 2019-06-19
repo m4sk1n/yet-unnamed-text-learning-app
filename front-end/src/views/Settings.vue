@@ -64,7 +64,7 @@
       <v-subheader>{{ $t('settings.header_backup') }}</v-subheader>
 
       <v-list-tile
-        @click="exportAllCourses()"
+        @click="exportAllCourses"
       >
         <v-list-tile-content>
           <v-list-tile-title>{{ $t('settings.export_all') }}</v-list-tile-title>
@@ -72,7 +72,7 @@
       </v-list-tile>
 
       <v-list-tile
-        @click="importMultipleCourses()"
+        @click="importMultipleCourses"
       >
         <v-list-tile-content>
           <v-list-tile-title>{{ $t('settings.import_multiple') }}</v-list-tile-title>
@@ -80,7 +80,7 @@
       </v-list-tile>
 
       <v-list-tile
-        @click="importCourse()"
+        @click="importCourse"
       >
         <v-list-tile-content>
           <v-list-tile-title>{{ $t('settings.import_single') }}</v-list-tile-title>
@@ -132,7 +132,7 @@
           <v-btn
             color="primary"
             flat
-            @click="continueImport()"
+            @click="continueImport"
           >{{ $t('settings.duplicates_import') }}</v-btn>
         </v-card-actions>
       </v-card>
@@ -245,7 +245,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   .longer-setting > .v-list__tile {
     height: auto;
   }

@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="error-screen ma-3 pa-3"
+    class="wrong-answer-screen ma-3 pa-3"
     :dark="!darkMode"
     :light="darkMode"
   >
@@ -12,7 +12,7 @@
         {{ $t('session.correct_answer') }}
       </span>
       <br>
-      <div class="error-answer">{{ error.result }}</div>
+      <div class="wrong-answer-text">{{ error.result }}</div>
     </div>
   </v-card>
 </template>
@@ -31,14 +31,14 @@ export default {
 }
 </script>
 
-<style>
-.error-screen {
+<style scoped lang="scss">
+.wrong-answer-screen {
   display: flex;
   bottom: 0;
   z-index: 1;
   max-height: 16em;
 }
-.error-answer {
+.wrong-answer-text {
   white-space: pre-wrap;
   max-height: calc(100% - 16px);
   overflow: auto;

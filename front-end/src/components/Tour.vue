@@ -2,7 +2,7 @@
   <fragment>
     <v-toolbar card color="primary">
       <v-spacer />
-      <v-btn icon dark @click="dismiss()">
+      <v-btn icon dark @click="dismiss">
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </v-toolbar>
@@ -56,8 +56,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   .tour-item {
     height: -webkit-fill-available;
+    overflow: scroll;
+    padding-bottom: 50px;
   }
 </style>

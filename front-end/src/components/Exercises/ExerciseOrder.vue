@@ -8,7 +8,7 @@
       </p>
       <draggable
         :list="options"
-        :disabled="!!error"
+        :disabled="error"
       >
         <div v-for="line in options"
           :key="line"
@@ -16,8 +16,8 @@
           <v-chip
             class="chip-multiline"
             :class="{ 'py-1': line.includes('\n') }"
-            :dark="!!error && !darkMode"
-            :light="!!error && darkMode"
+            :dark="error && !darkMode"
+            :light="error && darkMode"
           >
             <v-avatar left>
               <v-icon small>mdi-reorder-horizontal</v-icon>
@@ -34,7 +34,7 @@
     </div>
     <v-spacer />
     <div class="exercise-bottom mx-3 mb-3">
-      <Error v-if="error"
+      <WrongAnswer v-if="error"
         :error="error"
       />
       <v-spacer></v-spacer>
@@ -46,13 +46,13 @@
 <script>
 import draggable from 'vuedraggable';
 import ButtonCheck from '@/components/ButtonCheck';
-import Error from '@/components/Error';
+import WrongAnswer from '@/components/WrongAnswer';
 
 export default {
   components: {
     draggable,
     ButtonCheck,
-    Error,
+    WrongAnswer,
   },
   
   props: {
@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .chip-multiline .v-chip__content {
   white-space: pre-wrap;
   min-height: 32px !important;

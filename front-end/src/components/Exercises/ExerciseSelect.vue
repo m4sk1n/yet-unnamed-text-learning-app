@@ -26,8 +26,8 @@
             <v-chip
               class="chip-multiline"
               :class="{ 'py-1': line.includes('\n') }"
-              :dark="!!error && !darkMode"
-              :light="!!error && darkMode"
+              :dark="error && !darkMode"
+              :light="error && darkMode"
             >
               <v-avatar left>
                 <v-icon small>mdi-reorder-horizontal</v-icon>
@@ -45,7 +45,7 @@
     </div>
     <v-spacer />
     <div class="exercise-bottom mx-3 mb-3">
-      <Error v-if="error"
+      <WrongAnswer v-if="error"
         :error="error"
       />
       <draggable v-else
@@ -76,13 +76,13 @@
 <script>
 import draggable from 'vuedraggable';
 import ButtonCheck from '@/components/ButtonCheck';
-import Error from '@/components/Error';
+import WrongAnswer from '@/components/WrongAnswer';
 
 export default {
   components: {
     draggable,
     ButtonCheck,
-    Error,
+    WrongAnswer,
   },
 
   props: {
@@ -126,7 +126,7 @@ export default {
         this.error.next();
         this.error = undefined;
       } else {
-        let answer = [];
+        const answer = [];
         for (const index in this.answer) {
           if (!this.answer[index][0]) answer[index] = this.text[index];
           else answer[index] = this.answer[index][0];

@@ -22,7 +22,7 @@
 
         <v-list>
           <v-list-tile
-            @click="exportCourse()"
+            @click="exportCourse"
           >
             {{ $t('dialogs.edit_course.button_export') }}
           </v-list-tile>
@@ -34,7 +34,7 @@
         small
       >
         <v-icon
-          @click="dismiss()"
+          @click="dismiss"
         >mdi-close</v-icon>
       </v-btn>
     </v-card-title>
@@ -76,7 +76,7 @@
       <v-btn
         color="primary"
         :disabled="!contentIsValid"
-        @click="update()"
+        @click="update"
       >
         {{ $t('general.update') }}
       </v-btn>
@@ -105,7 +105,7 @@
 
           <v-btn
             flat
-            @click="deleteCourse()"
+            @click="deleteCourse"
           >
             {{ $t('general.delete') }}
           </v-btn>
@@ -136,7 +136,7 @@
 
           <v-btn
             flat
-            @click="resetCourse()"
+            @click="resetCourse"
           >
             {{ $t('general.reset') }}
           </v-btn>

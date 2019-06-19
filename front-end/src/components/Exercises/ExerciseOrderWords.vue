@@ -8,12 +8,12 @@
       </p>
       <draggable
         :list="options"
-        :disabled="!!error"
+        :disabled="error"
       >
         <v-chip v-for="line in options"
           :key="line"
-          :dark="!!error && !darkMode"
-          :light="!!error && darkMode"
+          :dark="error && !darkMode"
+          :light="error && darkMode"
         >
           <v-avatar left>
             <v-icon small>mdi-reorder-vertical</v-icon>
@@ -27,7 +27,7 @@
     </div>
     <v-spacer />
     <div class="exercise-bottom mx-3 mb-3">
-      <Error v-if="error"
+      <WrongAnswer v-if="error"
         :error="error"
       />
       <v-spacer />
@@ -39,13 +39,13 @@
 <script>
 import draggable from 'vuedraggable';
 import ButtonCheck from '@/components/ButtonCheck';
-import Error from '@/components/Error';
+import WrongAnswer from '@/components/WrongAnswer';
 
 export default {
   components: {
     draggable,
     ButtonCheck,
-    Error,
+    WrongAnswer,
   },
   
   props: {

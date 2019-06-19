@@ -6,7 +6,7 @@
       fab
       large
       dark
-      @click="check()"
+      @click="check"
     >
       <v-icon large>
         mdi-chevron-right
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   .button-check {
     display: flex;
     z-index: 2;

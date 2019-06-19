@@ -13,7 +13,7 @@
 
       <v-stepper-content step="1">
         <v-form
-          @submit="validateDetails()"
+          @submit="validateDetails"
           ref="details"
           lazy-validation
         >
@@ -39,14 +39,14 @@
         <v-btn
           type="submit"
           color="primary"
-          @click="validateDetails()"
+          @click="validateDetails"
         >
           {{  $t('general.continue') }}
         </v-btn>
 
         <v-btn
           flat
-          @click="dismiss()"
+          @click="dismiss"
         >{{ $t('general.cancel') }}</v-btn>
       </v-stepper-content>
 
@@ -72,14 +72,14 @@
           <v-btn
             color="primary"
             :disabled="!contentIsValid"
-            @click="create()"
+            @click="create"
           >
             {{ $t('general.create') }}
           </v-btn>
 
           <v-btn
             flat
-            @click="dismiss()"
+            @click="dismiss"
           >
             {{ $t('general.cancel') }}
           </v-btn>

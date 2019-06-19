@@ -19,7 +19,7 @@
     </div>
     <v-spacer />
     <div class="exercise-bottom mx-3 mb-3">
-      <Error v-if="error"
+      <WrongAnswer v-if="error"
         :error="error"
       />
       <v-spacer></v-spacer>
@@ -32,7 +32,7 @@
 import Vue from 'vue';
 import draggable from 'vuedraggable';
 import ButtonCheck from '@/components/ButtonCheck';
-import Error from '@/components/Error';
+import WrongAnswer from '@/components/WrongAnswer';
 
 const ExerciseContent = Vue.component('exercise-content', {
   props: {
@@ -95,7 +95,7 @@ export default {
   components: {
     draggable,
     ButtonCheck,
-    Error,
+    WrongAnswer,
     ExerciseContent,
   },
 
@@ -131,7 +131,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .chip-multiline .v-chip__content {
   white-space: pre-wrap;
   min-height: 32px !important;

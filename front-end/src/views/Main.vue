@@ -112,7 +112,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .alerts-main {
   position: absolute;
   bottom: 56px;

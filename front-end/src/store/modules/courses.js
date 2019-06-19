@@ -7,16 +7,6 @@ const state = {
   courses: {},
 };
 
-const getters = {
-  list: (state) => {
-    return state.courseList;
-  },
-
-  courses: (state) => {
-    return state.courses;
-  },
-};
-
 const mutations = {
   pushCourse(state, course) {
     state.courseList = [course, ...state.courseList];
@@ -123,7 +113,6 @@ const actions = {
 export default {
   namespaced: true,
   state,
-  getters,
   mutations,
   actions,
 }

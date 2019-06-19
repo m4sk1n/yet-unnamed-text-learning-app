@@ -10,7 +10,7 @@
 export default {
   computed: {
     darkMode() {
-      return this.$store.getters['settings/all'].darkMode;
+      return this.$store.state['settings'].settings.darkMode;
     }
   },
 

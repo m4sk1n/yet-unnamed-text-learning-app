@@ -90,7 +90,7 @@ export default {
 
   computed: {
     courses() {
-      return [...this.$store.getters['courses/list']]
+      return [...this.$store.state['courses'].courseList]
         .sort((a, b) => { return b.updatedAt - a.updatedAt });
     },
   },

@@ -4,12 +4,6 @@ const state = {
   alerts: [],
 };
 
-const getters = {
-  all: (state) => {
-    return state.alerts;
-  },
-};
-
 const mutations = {
   add(state, alert) {
     state.alerts.push(alert);
@@ -36,7 +30,6 @@ const actions = {
 export default {
   namespaced: true,
   state,
-  getters,
   mutations,
   actions,
 }

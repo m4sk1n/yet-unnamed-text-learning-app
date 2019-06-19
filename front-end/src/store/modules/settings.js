@@ -8,12 +8,6 @@ const state = {
   },
 };
 
-const getters = {
-  all: (state) => {
-    return state.settings;
-  },
-};
-
 const mutations = {
   setSettings(state, settings) {
     state.settings = {...state.settings, ...settings};
@@ -42,7 +36,6 @@ const actions = {
 export default {
   namespaced: true,
   state,
-  getters,
   mutations,
   actions,
 }

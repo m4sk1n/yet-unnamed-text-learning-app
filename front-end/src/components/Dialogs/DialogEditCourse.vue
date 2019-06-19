@@ -176,7 +176,7 @@ export default {
   },
 
   created() {
-    const courseDetails = this.$store.getters['courses/list']
+    const courseDetails = this.$store.state['courses'].courseList
       .find(({ uuid }) => uuid === this.uuid);
     this.title = courseDetails.title;
     this.originalTitle = courseDetails.title;
@@ -220,9 +220,9 @@ export default {
 
     exportCourse() {
       let course = {};
-      course.details = this.$store.getters['courses/list']
+      course.details = this.$store.state['courses'].courseList
         .find(({ uuid }) => uuid === this.uuid);
-      course.content = this.$store.getters['courses/courses'][this.uuid];
+      course.content = this.$store.state['courses'].courses[this.uuid];
       const blob = new Blob([JSON.stringify(course)], { type: 'application/json' });
       const el = document.createElement('a');
       el.download = `export-${this.uuid}.json`;

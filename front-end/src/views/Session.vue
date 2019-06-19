@@ -61,9 +61,9 @@ import ProgressBar from '@/components/ProgressBar';
 export default {
   async created() {
     this.content = Content.parse(
-      this.$store.getters['courses/courses'][this.$route.params.uuid]
+      this.$store.state['courses'].courses[this.$route.params.uuid]
     );
-    this.session = new Session({ content: this.content, exercises: this.$store.getters['settings/all'].exercisesAmount });
+    this.session = new Session({ content: this.content, exercises: this.$store.state['settings'].settings.exercisesAmount });
     if (this.session.finished) {
       this.$store.dispatch('alerts/add', {
         text: this.$t('alerts.finished_course'),

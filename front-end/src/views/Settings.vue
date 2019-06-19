@@ -150,7 +150,7 @@ export default {
   data() {
     return {
       showImportDialog: false,
-      continueImport: undefined,
+      continueImport: () => 0,
       duplicateCourseName: '',
       langs,
     };
@@ -158,25 +158,25 @@ export default {
 
   computed: {
     darkMode() {
-      return this.$store.getters['settings/all'].darkMode;
+      return this.$store.state['settings'].settings.darkMode;
     },
 
     exercisesAmount() {
-      return this.$store.getters['settings/all'].exercisesAmount;
+      return this.$store.state['settings'].settings.exercisesAmount;
     },
 
     language() {
-      return this.$store.getters['settings/all'].language;
+      return this.$store.state['settings'].settings.language;
     },
   },
 
   methods: {
     exportAllCourses() {
       const courses = [];
-      for (const details of this.$store.getters['courses/list']) {
+      for (const details of this.$store.state['courses'].courseList) {
         courses.push({
           details,
-          content: this.$store.getters['courses/courses'][details.uuid],
+          content: this.$store.state['courses'].courses[details.uuid],
         });
       }
       const blob = new Blob([JSON.stringify(courses)], { type: 'application/json' });
@@ -202,14 +202,14 @@ export default {
           const courses = JSON.parse(ev.target.result);
           const continueImport = (handling) => {
             for (const course of courses) {
-              if (handling !== 'skip' || !this.$store.getters['courses/courses'][course.details.uuid]) {
+              if (handling !== 'skip' || !this.$store.state['courses'].courses[course.details.uuid]) {
                 this.$store.dispatch('courses/importCourse', course);
               }
             }
             this.showImportDialog = false;
           };
           for (const course of courses) {
-            if (this.$store.getters['courses/courses'][course.details.uuid]) {
+            if (this.$store.state['courses'].courses[course.details.uuid]) {
               this.showImportDialog = true;
             }
           }

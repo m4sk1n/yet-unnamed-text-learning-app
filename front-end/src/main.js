@@ -20,5 +20,5 @@ new Vue({
 }).$mount('#app');
 
 store.dispatch('settings/loadSettings').then(() => {
-  i18n.locale = store.getters['settings/all'].language;
+  i18n.locale = store.state['settings'].settings.language;
 });

@@ -93,7 +93,7 @@ export default {
 
   computed: {
     alerts() {
-      return [...this.$store.getters['alerts/all']].reverse();
+      return [...this.$store.state['alerts'].alerts].reverse();
     },
 
     color() {

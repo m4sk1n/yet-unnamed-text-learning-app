@@ -1,4 +1,10 @@
 {
+  "about": {
+    "about": "O aplikacji",
+    "about_desc": "yet-unnamed-text-learning-app jest aplikcją mającą pomagać w nauce dłuższych porcji tekstu.",
+    "author_info": "Utworzył {0}.",
+    "license_info": "Ta aplikacja dostępna jest na licencji MIT."
+  },
   "alerts": {
     "created_course": "Pomyślnie utworzono nowy kurs.",
     "edited_course_details": "Pomyślnie zedytowano informacje o kursie.",
@@ -46,6 +52,7 @@
     "help": "Pomoc",
     "learn": "Ucz się",
     "reset": "Wyzeruj",
+    "revise": "Utrwalaj",
     "skip": "Pomiń",
     "update": "Aktualizuj"
   },
@@ -64,10 +71,22 @@
     "header_backup": "Kopie zapasowe",
     "header_general": "Ogólne",
     "import_multiple": "Importuj wiele kursów",
-    "import_single": "Importuj jeden kurs"
+    "import_single": "Importuj jeden kurs",
+    "language": "Język interfejsu"
   },
   "toolbar": {
     "courses": "Kursy",
     "settings": "Ustawienia"
+  },
+  "tour": {
+    "hello_desc": "yet-unnamed-text-learning-app jest aplikcją mającą pomagać w nauce dłuższych porcji tekstu. Możesz utworzyć kurs zawierający tekst którego chcesz się nauczyć i zapamiętać go dzięki naszym prostym ćwiczeniom. Jeżeli nie utworzyłeś(-aś)  jeszcze żadnego kursu, użyj ikony {0} na górze.",
+    "hello_heading": "Witaj!",
+    "sessions_desc": "Naciśnięcie przycisku „Ucz się” rozpoczyna nową sesję nauki. Każda sesja składa się z kilku ćwiczeń (domyślnie 15, ale możesz zmienić tę liczbę w ustawieniach), zaprojektowanych tak, aby pomagały w zapamiętywaniu tekstu. Są tu trzy rodzaje ćwiczeń:",
+    "sessions_exercise1": "w ćwiczeniach porządkowania, dostajesz listę słów lub dłuższych części tekstu. Twoim zadaniem jest uporządkowanie ich w kolejności, w której pojawiają się w tekście,",
+    "sessions_exercise2": "w ćwiczeniach wybierania, dostajesz niekompletny fragment tekstu. Twoim zadaniem jest przeciągnięcie brakujących fragmentów tekstu z dołu we właściwe miejsce. Aby było trudniej, są tu też dodatkowe słowa, które nie są częścią tego fragmentu,",
+    "sessions_exercise3": "w ćwiczeniach pisania, dostajesz niekompletny fragment tekstu. Twoim zadaniem jest wprowadzenie brakujących słów we właściwe miejsce.",
+    "sessions_heading": "Sesje nauki",
+    "settings_desc": "Aplikacja zawiera ciemny motyw, który możesz włączyć w ustawieniach. Możesz też zaimportować kopię kursów z innego urządzenia lub wyeksportować je. Wspomniałem już, że po kliknięciu ikony {0} możesz wyeksportować pojedynczy kurs?",
+    "settings_heading": "Ustawienia"
   }
 }

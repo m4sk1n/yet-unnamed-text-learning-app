@@ -138,7 +138,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .v-chip.placeholder-long {
   height: 28px;
   width: 16em;

@@ -130,7 +130,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .v-content > div {
   display: flex;
   flex-direction: column;

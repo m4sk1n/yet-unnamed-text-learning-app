@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .chip-multiline .v-chip__content {
   white-space: pre-wrap;
   min-height: 32px !important;

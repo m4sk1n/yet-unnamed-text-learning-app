@@ -29,6 +29,12 @@
                 dark
               >{{ $t('general.learn') }}</v-btn>
 
+              <!-- <v-btn
+                @click="startSession(course, 'revise')"
+                flat
+                dark
+              >{{ $t('general.revise') }}</v-btn> -->
+
               <v-spacer></v-spacer>
 
               <v-btn
@@ -117,8 +123,8 @@ export default {
       this.courseToEdit = course;
     },
 
-    startSession(course) {
-      if (course.progress == 100) {
+    startSession(course, type) {
+      if (course.progress == 100 && type !== 'revise') {
         this.$store.dispatch('alerts/add', {
           text: this.$t('alerts.finished_course'),
           type: 'info',
@@ -126,7 +132,12 @@ export default {
         });
         return;
       }
-      this.$router.push(`/session/${course.uuid}`);
+      this.$router.push({
+        path: `/session/${course.uuid}`,
+        query: {
+          type: type,
+        },
+      });
     },
   },
 }
